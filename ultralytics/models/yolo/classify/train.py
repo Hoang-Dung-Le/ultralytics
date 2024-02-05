@@ -37,6 +37,7 @@ class ClassificationTrainer(BaseTrainer):
         if overrides.get("imgsz") is None:
             overrides["imgsz"] = 224
         super().__init__(cfg, overrides, _callbacks)
+        print("da load")
 
     def set_model_attributes(self):
         """Set the YOLO model's class names from the loaded dataset."""
