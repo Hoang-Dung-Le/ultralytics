@@ -11,6 +11,7 @@ class YOLO(Model):
     @property
     def task_map(self):
         """Map head to model, trainer, validator, and predictor classes."""
+        print("Da vao classfify")
         return {
             "classify": {
                 "model": ClassificationModel,
