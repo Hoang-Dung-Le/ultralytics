@@ -6,7 +6,7 @@ from ultralytics.models import yolo
 from ultralytics.nn.tasks import SegmentationModel
 from ultralytics.utils import DEFAULT_CFG, RANK
 from ultralytics.utils.plotting import plot_images, plot_results
-from torchviz import make_dot, plot_model
+# from torchviz import make_dot, plot_model
 
 
 class SegmentationTrainer(yolo.detect.DetectionTrainer):
@@ -37,8 +37,8 @@ class SegmentationTrainer(yolo.detect.DetectionTrainer):
         if weights:
             model.load(weights)
         # print(model)
-        dot = make_dot(model(model))
-        plot_model(dot, "/content/model.png")
+        # dot = make_dot(model(model))
+        # plot_model(dot, "/content/model.png")
         return model
 
     def get_validator(self):
